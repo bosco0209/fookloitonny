@@ -3,7 +3,6 @@
 <head>
 	
 	
-    <!-- Add this in <head> -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
         // ============================================
@@ -670,6 +669,26 @@ ${fullName}`;
             background-color: var(--primary);
             color: white;
         }
+        
+        /* NEW PRICE LIST STYLING */
+        .price-list-container {
+            padding: 20px;
+            background-color: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 50px;
+            text-align: center; /* Center content in the container */
+        }
+
+        .full-width-price-list-img {
+            width: 100%;
+            max-width: 1000px; 
+            height: auto;
+            display: block; 
+            margin: 20px auto; /* Center image and add vertical margin */
+            border-radius: var(--radius);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
         .product-title {
             font-size: 1.5rem;
@@ -1161,15 +1180,13 @@ ${fullName}`;
     </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
     <header>
         <div class="container nav-container">
            <div class="logo">
                 <a href="index.html">
-  <img src="https://assets.yellowpages.my/images/logo/thumb/webp/2oNwlFlPOcKrMkvoCYPUEST5Gpzt9Z0P304k8Ng1.webp" 
-       alt="FOOKLOL GROUP Logo"
-       width="100"> <!-- Adjust number as needed -->
-</a>
+    <img src="https://assets.yellowpages.my/images/logo/thumb/webp/2oNwlFlPOcKrMkvoCYPUEST5Gpzt9Z0P304k8Ng1.webp" 
+        alt="FOOKLOL GROUP Logo"
+        width="100"> </a>
                 <div class="logo-text">Fook Loi <span>Proton</span></div>
             </div>
             
@@ -1181,6 +1198,7 @@ ${fullName}`;
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="" class="nav-link active" data-page="home">Home</a></li>
                     <li><a href="" class="nav-link" data-page="products">Proton Cars</a></li>
+                    <li><a href="" class="nav-link" data-page="price-list">Price List 💰</a></li>
                     <li><a href="" class="nav-link" data-page="about">About Me</a></li>
                     <li><a href="" class="nav-link" data-page="booking">Booking</a></li>
                 </ul>
@@ -1188,7 +1206,6 @@ ${fullName}`;
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>Drive Your Dream Proton Today</h1>
@@ -1198,9 +1215,7 @@ ${fullName}`;
         </div>
     </section>
 
-    <!-- Main Content - Pages -->
     <main class="container">
-        <!-- Home Page -->
         <section id="home-page" class="page active">
             <div class="intro">
                 <div class="intro-content">
@@ -1239,7 +1254,6 @@ ${fullName}`;
             </div>
         </section>
 
-        <!-- Products Page -->
         <section id="products-page" class="page">
             <h2 class="section-title">Our Proton Models</h2>
             
@@ -1254,141 +1268,137 @@ ${fullName}`;
 				<div class="category-tab" data-category="active">Active Models</div>
             </div>
             
-            <!-- Premium Category -->
             <div id="premium-category" class="product-category active">
                 <div class="products-grid">
-                    <!-- Proton S70 Premium -->
                     <div class="product-card">
-                        <img src="https://automacha.com/wp-content/uploads/2023/11/01.-Proton-S70-780x470.jpg" alt="Proton X90 Premium" class="product-image">
+                        <img src="https://automacha.com/wp-content/uploads/2023/11/01.-Proton-S70-780x470.jpg" alt="Proton S70 Premium" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge premium-badge">Premium</span>
                             <h3 class="product-title">Proton S70 Premium</h3>
                             <div class="product-price">From RM 83,730.10</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Sedan</li>
-                                <li><i class="fas fa-check"></i> 1.5L turbocharged</li>
-                                <li><i class="fas fa-check"></i> Premium sedan offering, spacious interior, modern tech features </li>
-                                <li><i class="fas fa-check"></i> Comfort-oriented family sedan</li>
+                                <li><i class="fas fa-check"></i> **B-Segment Sedan** (Geely Emgrand based)</li>
+                                <li><i class="fas fa-check"></i> **1.5L Turbo** (150PS/226Nm) 7-Speed DCT</li>
+                                <li><i class="fas fa-check"></i> **Driver Seat Power Adjust**, 12.3-inch Infotainment</li>
+                                <li><i class="fas fa-check"></i> **ADAS** (AEB, Lane Keep, ACC)</li>
+                                <li><i class="fas fa-check"></i> Rear A/C Vents, 6 Airbags</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton S70 Premium">Book Test Drive</button>
                         </div>
                     </div>
                     
-                    <!-- Proton E-Mas Premium -->
                     <div class="product-card">
-                        <img src="https://assets.autobuzz.my/wp-content/uploads/2024/12/16165907/2024-Proton-eMAS7-Launch-Malaysia-4.jpg" alt="Proton X70 Premium" class="product-image">
+                        <img src="https://assets.autobuzz.my/wp-content/uploads/2024/12/16165907/2024-Proton-eMAS7-Launch-Malaysia-4.jpg" alt="Proton E-Mas 7 Premium" class="product-image">
                         <div class="product-info">
-                            <span class="product-category-badge premium-badge">Premium</span>
+                            <span class="product-category-badge premium-badge">Premium (Future)</span>
                             <h3 class="product-title">Proton E-Mas 7 Premium</h3>
                             <div class="product-price">From RM 119,800</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> 5-door MPV/people carrier concept</li>
-                                <li><i class="fas fa-check"></i> Compact but spacious family-oriented vehicle</li>
-                                <li><i class="fas fa-check"></i> Also intended for hybrid powertrain</li>
-                                <li><i class="fas fa-check"></i> Likely 5-7 seats</li>
+                                <li><i class="fas fa-check"></i> **7-Seater EV/Hybrid** Concept</li>
+                                <li><i class="fas fa-check"></i> Visionary MPV/Crossover Styling</li>
+                                <li><i class="fas fa-check"></i> Focus on **Sustainable Family Mobility**</li>
+                                <li><i class="fas fa-check"></i> Spacious Flexible Interior Layout</li>
                             </ul>
-                            <button class="btn test-drive-btn" data-car="Proton E-Mas Premium">Book Test Drive</button>
+                            <button class="btn test-drive-btn" data-car="Proton E-Mas 7 Premium">Book Test Drive</button>
                         </div>
                     </div>
 					
-					<!-- Proton E-Mas Premium -->
-                    <div class="product-card">
-                        <img src="https://assets.autobuzz.my/wp-content/uploads/2024/12/16165907/2024-Proton-eMAS7-Launch-Malaysia-4.jpg" alt="Proton X70 Premium" class="product-image">
+					<div class="product-card">
+                        <img src="https://assets.autobuzz.my/wp-content/uploads/2024/12/16165907/2024-Proton-eMAS7-Launch-Malaysia-4.jpg" alt="Proton E-Mas 5 Premium" class="product-image">
                         <div class="product-info">
-                            <span class="product-category-badge premium-badge">Premium</span>
+                            <span class="product-category-badge premium-badge">Premium (Future)</span>
                             <h3 class="product-title">Proton E-Mas 5 Premium</h3>
                             <div class="product-price">From RM 72,800</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> 5-door hatchback concept (city car / supermini size)</li>
-                                <li><i class="fas fa-check"></i> Compact, youthful, aerodynamic</li>
-                                <li><i class="fas fa-check"></i> Designed for a hybrid powertrain</li>
-                                <li><i class="fas fa-check"></i> 4-seater</li>
+                                <li><i class="fas fa-check"></i> **City-Sized EV/Hybrid** Hatchback Concept</li>
+                                <li><i class="fas fa-check"></i> Modern, Aerodynamic Design</li>
+                                <li><i class="fas fa-check"></i> Focus on **Urban Efficiency**</li>
+                                <li><i class="fas fa-check"></i> Compact Size for Easy Parking</li>
                             </ul>
-                            <button class="btn test-drive-btn" data-car="Proton E-Mas Premium">Book Test Drive</button>
+                            <button class="btn test-drive-btn" data-car="Proton E-Mas 5 Premium">Book Test Drive</button>
                         </div>
                     </div>
-					 <!-- Proton Persona Premium -->
-                    <div class="product-card">
-                        <img src="https://paultan.org/image/2021/08/2022-Proton-Persona-facelift-Premium-Space-Grey-01-e1628134455824.jpg" alt="Proton X90 Premium" class="product-image">
+					
+					 <div class="product-card">
+                        <img src="https://paultan.org/image/2021/08/2022-Proton-Persona-facelift-Premium-Space-Grey-01-e1628134455824.jpg" alt="Proton Persona Premium" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge premium-badge">Premium</span>
                             <h3 class="product-title">Proton Persona Premium</h3>
                             <div class="product-price">From RM 61,668</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Compact sedan</li>
-                                <li><i class="fas fa-check"></i> 1.6L naturally aspirated</li>
-                                <li><i class="fas fa-check"></i> Practical daily driver, fuel efficient, affordable maintenance</li>
-                                <li><i class="fas fa-check"></i> Value-for-money sedan</li>
+                                <li><i class="fas fa-check"></i> **B-Segment Sedan** (Facelifted Iriz Platform)</li>
+                                <li><i class="fas fa-check"></i> **1.6L VVT** Engine with CVT</li>
+                                <li><i class="fas fa-check"></i> **510 Litre Boot Space**, Largest in Class</li>
+                                <li><i class="fas fa-check"></i> **7-inch Touchscreen** Infotainment</li>
+                                <li><i class="fas fa-check"></i> **Leatherette Seats**, Auto Headlamps</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton Persona Premium">Book Test Drive</button>
                         </div>
                     </div>
 					
-					 
-					
-					 <!-- Proton Saga Premium -->
-                    <div class="product-card">
-                        <img src="https://imgcdn.zigwheels.my/large/gallery/exterior/26/2669/proton-saga-2025-dimension-front-view-983517.jpg" alt="Proton X90 Premium" class="product-image">
+					 <div class="product-card">
+                        <img src="https://imgcdn.zigwheels.my/large/gallery/exterior/26/2669/proton-saga-2025-dimension-front-view-983517.jpg" alt="Proton Saga Premium" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge premium-badge">Premium</span>
                             <h3 class="product-title">Proton Saga Premium</h3>
                             <div class="product-price">From RM 53,220.15</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Entry-level compact sedan</li>
-                                <li><i class="fas fa-check"></i> 1.3L naturally aspirated</li>
-                                <li><i class="fas fa-check"></i> Most affordable Proton, basic but reliable, excellent fuel economy</li>
-                                <li><i class="fas fa-check"></i> Budget-friendly first car</li>
+                                <li><i class="fas fa-check"></i> **A-Segment Sedan** (Affordable Market Leader)</li>
+                                <li><i class="fas fa-check"></i> **1.3L VVT** Engine with CVT</li>
+                                <li><i class="fas fa-check"></i> **7-inch Touchscreen** (Exclusive to Premium)</li>
+                                <li><i class="fas fa-check"></i> **Reverse Camera** and Front Parking Sensors</li>
+                                <li><i class="fas fa-check"></i> Electronic Stability Control **(ESC)**</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton Saga Premium">Book Test Drive</button>
                         </div>
                     </div>
 					
-					 <!-- Proton X90 Premium -->
-                    <div class="product-card">
+					 <div class="product-card">
                         <img src="https://carsofmalaysia.com/wp-content/uploads/2024/09/Proton-X90-Premium.jpg" alt="Proton X90 Premium" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge premium-badge">Premium</span>
                             <h3 class="product-title">Proton X90 Premium</h3>
                             <div class="product-price">From RM 149,904.65</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> 7-seater midsize SUV</li>
-                                <li><i class="fas fa-check"></i> 1.5L turbocharged mild hybrid (48V)</li>
-                                <li><i class="fas fa-check"></i> Advanced Driver Assistance Systems (ADAS), Nappa leather seats, panoramic sunroof, digital cockpit</li>
-                                <li><i class="fas fa-check"></i> Flagship family SUV</li>
+                                <li><i class="fas fa-check"></i> **D-Segment 7-Seater SUV**</li>
+                                <li><i class="fas fa-check"></i> **1.5L TGDi Mild Hybrid (48V)** System</li>
+                                <li><i class="fas fa-check"></i> Full **Level 2 ADAS** Safety Features</li>
+                                <li><i class="fas fa-check"></i> **Panoramic Sunroof** (Premium/Flagship)</li>
+                                <li><i class="fas fa-check"></i> 6 or 7-Seater Layout Options</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton X90 Premium">Book Test Drive</button>
                         </div>
                     </div>
 					
-					 <!-- Proton X70 Premium -->
-                    <div class="product-card">
-                        <img src="https://imgcdn.zigwheels.my/large/gallery/exterior/26/2471/proton-x70-front-angle-low-view-523901.jpg" alt="Proton X90 Premium" class="product-image">
+					 <div class="product-card">
+                        <img src="https://imgcdn.zigwheels.my/large/gallery/exterior/26/2471/proton-x70-front-angle-low-view-523901.jpg" alt="Proton X70 Premium" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge premium-badge">Premium</span>
                             <h3 class="product-title">Proton X70 Premium</h3>
                             <div class="product-price">From RM 128,341.39</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> 5-seater compact SUV</li>
-                                <li><i class="fas fa-check"></i> 1.5L/1.8L turbocharged gasoline</li>
-                                <li><i class="fas fa-check"></i> Geely-based, ADAS, touchscreen infotainment, AWD available</li>
-                                <li><i class="fas fa-check"></i> Popular midsize SUV</li>
+                                <li><i class="fas fa-check"></i> **C-Segment SUV** (CKD model)</li>
+                                <li><i class="fas fa-check"></i> **1.5L TGDi or 1.8L TGDi** Engine</li>
+                                <li><i class="fas fa-check"></i> **Nappa Leather Seats**, Ventilated Front Seats</li>
+                                <li><i class="fas fa-check"></i> **ADAS** (AEB, Lane Departure Warning)</li>
+                                <li><i class="fas fa-check"></i> **AWD Option** Available (Executive AWD)</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton X70 Premium">Book Test Drive</button>
                         </div>
                     </div>
                     
-                    <!-- Proton X50 Premium -->
                     <div class="product-card">
-                        <img src="https://automacha.com/wp-content/uploads/2020/09/Proton-X50-showroom-pictures__7204-1.jpg" alt="Proton S70 Premium" class="product-image">
+                        <img src="https://automacha.com/wp-content/uploads/2020/09/Proton-X50-showroom-pictures__7204-1.jpg" alt="Proton X50 Premium" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge premium-badge">Premium</span>
                             <h3 class="product-title">Proton X50 Premium</h3>
                             <div class="product-price">From RM 105,931.40</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Subcompact SUV (B-segment)</li>
-                                <li><i class="fas fa-check"></i> 1.5L turbocharged 3-cylinder</li>
-                                <li><i class="fas fa-check"></i> Youth-oriented design, comprehensive safety, responsive performance</li>
-                                <li><i class="fas fa-check"></i> Best-selling compact SUV in Malaysia</li>
+                                <li><i class="fas fa-check"></i> **B-Segment Compact SUV**</li>
+                                <li><i class="fas fa-check"></i> **1.5L TGDi** (177PS/255Nm) 7-Speed DCT</li>
+                                <li><i class="fas fa-check"></i> **Full ADAS** (AEB, ACC, LKA, IHBC, etc.)</li>
+                                <li><i class="fas fa-check"></i> **Dual-Tone Exterior**, Voice Command ("Hi Proton")</li>
+                                <li><i class="fas fa-check"></i> Electronic Parking Brake **(EPB)**</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton X50 Premium">Book Test Drive</button>
                         </div>
@@ -1396,10 +1406,8 @@ ${fullName}`;
                 </div>
             </div>
             
-            <!-- Executive Category -->
             <div id="executive-category" class="product-category">
                 <div class="products-grid">
-                   <!-- Proton S70 Executive -->
                     <div class="product-card">
                         <img src="https://automacha.com/wp-content/uploads/2023/11/01.-Proton-S70-780x470.jpg" alt="Proton S70 Executive" class="product-image">
                         <div class="product-info">
@@ -1407,109 +1415,103 @@ ${fullName}`;
                             <h3 class="product-title">Proton S70 Executive</h3>
                             <div class="product-price">From RM 77,611.71</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Flagship 7-Seater SUV</li>
-                                <li><i class="fas fa-check"></i> Mild Hybrid Technology</li>
-                                <li><i class="fas fa-check"></i> Luxurious Nappa Leather</li>
-                                <li><i class="fas fa-check"></i> Advanced Safety Suite</li>
-                                <li><i class="fas fa-check"></i> 48V Belt Starter Generator</li>
+                                <li><i class="fas fa-check"></i> **B-Segment Sedan** (Entry Turbo Model)</li>
+                                <li><i class="fas fa-check"></i> **1.5L Turbo** (150PS/226Nm) 7-Speed DCT</li>
+                                <li><i class="fas fa-check"></i> **Leatherette Seats**, 10.3-inch Infotainment</li>
+                                <li><i class="fas fa-check"></i> **6 Airbags**, Electronic Stability Control (ESC)</li>
+                                <li><i class="fas fa-check"></i> **LED Headlights & Taillights**</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton S70 Executive">Book Test Drive</button>
                         </div>
                     </div>
                     
-                   
+                    
 					
-					 <!-- Proton Persona Executive -->
-                    <div class="product-card">
+					 <div class="product-card">
                         <img src="https://paultan.org/image/2021/08/2022-Proton-Persona-facelift-Premium-Space-Grey-01-e1628134455824.jpg" alt="Proton Persona Executive" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge executive-badge">Executive</span>
                             <h3 class="product-title">Proton Persona Executive</h3>
                             <div class="product-price">From RM 56,589.35</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Executive B-Segment Sedan</li>
-                                <li><i class="fas fa-check"></i> 1.6L VVT Engine</li>
-                                <li><i class="fas fa-check"></i> CVT Transmission</li>
-                                <li><i class="fas fa-check"></i> Advanced Safety Features</li>
-                                <li><i class="fas fa-check"></i> Executive Leather Seats</li>
+                                <li><i class="fas fa-check"></i> **B-Segment Sedan** (Mid-Range Model)</li>
+                                <li><i class="fas fa-check"></i> **1.6L VVT** Engine with CVT</li>
+                                <li><i class="fas fa-check"></i> **7-inch Touchscreen** with Voice Command</li>
+                                <li><i class="fas fa-check"></i> **Reverse Camera**, Rear USB ports</li>
+                                <li><i class="fas fa-check"></i> ESC & Traction Control (Standard across range)</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton Persona Executive">Book Test Drive</button>
                         </div>
                     </div>
 					
-					 <!-- Proton Iriz Executive -->
-                    <div class="product-card">
+					 <div class="product-card">
                         <img src="https://paultan.org/image/2021/08/2022-Proton-Iriz-Active-facelift-26-e1628131766595.jpg" alt="Proton Iriz Executive" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge executive-badge">Executive</span>
                             <h3 class="product-title">Proton Iriz Executive</h3>
                             <div class="product-price">From RM 53,507.56</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Executive B-Segment Hatchback</li>
-                                <li><i class="fas fa-check"></i> 1.6L VVT Engine</li>
-                                <li><i class="fas fa-check"></i> CVT Transmission</li>
-                                <li><i class="fas fa-check"></i> 5-Star ASEAN NCAP Rating</li>
-                                <li><i class="fas fa-check"></i> Executive Sound System</li>
+                                <li><i class="fas fa-check"></i> **B-Segment Hatchback** (Mid-Range Model)</li>
+                                <li><i class="fas fa-check"></i> **1.6L VVT** Engine with CVT</li>
+                                <li><i class="fas fa-check"></i> **LED Headlamps**, 16-inch Alloy Wheels</li>
+                                <li><i class="fas fa-check"></i> **7-inch Touchscreen** with Voice Command</li>
+                                <li><i class="fas fa-check"></i> **Black Interior Headliner** (Sporty Look)</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton Iriz Executive">Book Test Drive</button>
                         </div>
                     </div>
 					
-					 <!-- Proton Saga Executive -->
-                    <div class="product-card">
+					 <div class="product-card">
                         <img src="https://imgcdn.zigwheels.my/large/gallery/exterior/26/2669/proton-saga-2025-dimension-front-view-983517.jpg" alt="Proton Saga Executive" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge executive-badge">Executive</span>
                             <h3 class="product-title">Proton Saga Executive</h3>
                             <div class="product-price">From RM 48,121.5</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Executive A-Segment Sedan</li>
-                                <li><i class="fas fa-check"></i> 1.3L Engine</li>
-                                <li><i class="fas fa-check"></i> 4-Speed Automatic</li>
-                                <li><i class="fas fa-check"></i> Best-Selling Malaysian Car</li>
-                                <li><i class="fas fa-check"></i> Excellent Fuel Economy</li>
+                                <li><i class="fas fa-check"></i> **A-Segment Sedan** (Mid-Range Model)</li>
+                                <li><i class="fas fa-check"></i> **1.3L VVT** Engine, 4-Speed Automatic</li>
+                                <li><i class="fas fa-check"></i> **Body Kit** and Front Fog Lamps</li>
+                                <li><i class="fas fa-check"></i> **Reverse Camera** (Key feature over Standard)</li>
+                                <li><i class="fas fa-check"></i> Driver's Side **Auto Power Window**</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton Saga Executive">Book Test Drive</button>
                         </div>
                     </div>
 					
-					 <!-- Proton X90 Executive -->
-                    <div class="product-card">
+					 <div class="product-card">
                         <img src="https://carsofmalaysia.com/wp-content/uploads/2024/09/Proton-X90-Premium.jpg" alt="Proton X90 Executive" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge executive-badge">Executive</span>
                             <h3 class="product-title">Proton X90 Executive</h3>
                             <div class="product-price">From RM 135,628.41</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Flagship 7-Seater SUV</li>
-                                <li><i class="fas fa-check"></i> Mild Hybrid Technology</li>
-                                <li><i class="fas fa-check"></i> Luxurious Nappa Leather</li>
-                                <li><i class="fas fa-check"></i> Advanced Safety Suite</li>
-                                <li><i class="fas fa-check"></i> 48V Belt Starter Generator</li>
+                                <li><i class="fas fa-check"></i> **D-Segment 7-Seater SUV**</li>
+                                <li><i class="fas fa-check"></i> **1.5L TGDi Mild Hybrid (48V)** System</li>
+                                <li><i class="fas fa-check"></i> **Full ADAS** Safety Suite</li>
+                                <li><i class="fas fa-check"></i> **6-Way Power Driver Seat**</li>
+                                <li><i class="fas fa-check"></i> **Intelligent Cruise Control**</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton X90 Executive">Book Test Drive</button>
                         </div>
                     </div>
 					
-					 <!-- Proton X70 Executive -->
-                    <div class="product-card">
+					 <div class="product-card">
                         <img src="https://imgcdn.zigwheels.my/large/gallery/exterior/26/2471/proton-x70-front-angle-low-view-523901.jpg" alt="Proton X70 Executive" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge executive-badge">Executive</span>
                             <h3 class="product-title">Proton X70 Executive</h3>
                             <div class="product-price">From RM 115,099.12</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Executive SUV Category</li>
-                                <li><i class="fas fa-check"></i> 1.8L Turbo Engine</li>
-                                <li><i class="fas fa-check"></i> 7-Speed Dual Clutch</li>
-                                <li><i class="fas fa-check"></i> Intelligent AWD System</li>
-                                <li><i class="fas fa-check"></i> Executive Sound System</li>
+                                <li><i class="fas fa-check"></i> **C-Segment SUV** (Mid-Range Model)</li>
+                                <li><i class="fas fa-check"></i> **1.5L TGDi or 1.8L TGDi** Engine</li>
+                                <li><i class="fas fa-check"></i> **Voice Command** ("Hi Proton")</li>
+                                <li><i class="fas fa-check"></i> **Electric Power Tailgate**</li>
+                                <li><i class="fas fa-check"></i> **AWD Option** Available (Executive AWD)</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton X70 Executive">Book Test Drive</button>
                         </div>
                     </div>
                     
-                    <!-- Proton X50 Executive -->
                     <div class="product-card">
                         <img src="https://automacha.com/wp-content/uploads/2020/09/Proton-X50-showroom-pictures__7204-1.jpg" alt="Proton X50 Executive" class="product-image">
                         <div class="product-info">
@@ -1517,11 +1519,11 @@ ${fullName}`;
                             <h3 class="product-title">Proton X50 Executive</h3>
                             <div class="product-price">From RM 93,707.8</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Executive Sedan</li>
-                                <li><i class="fas fa-check"></i> 1.5L Turbo Engine</li>
-                                <li><i class="fas fa-check"></i> Advanced Safety Features</li>
-                                <li><i class="fas fa-check"></i> Executive Interior</li>
-                                <li><i class="fas fa-check"></i> Smart Connectivity</li>
+                                <li><i class="fas fa-check"></i> **B-Segment Compact SUV** (Mid-Range Model)</li>
+                                <li><i class="fas fa-check"></i> **1.5L MPi** (150PS/226Nm) 7-Speed DCT</li>
+                                <li><i class="fas fa-check"></i> **360-Degree Camera**, Auto Headlamps</li>
+                                <li><i class="fas fa-check"></i> **LED Headlights** & Adaptive Brake Lights</li>
+                                <li><i class="fas fa-check"></i> **Electronic Parking Brake (EPB)**</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton X50 Executive">Book Test Drive</button>
                         </div>
@@ -1530,97 +1532,91 @@ ${fullName}`;
             </div>
             
             
-            <!-- Standard Category -->
             <div id="standard-category" class="product-category">
                 <div class="products-grid">
-                   
+                    
                     
 					
-					 <!-- Proton Persona Standard -->
-                    <div class="product-card">
+					 <div class="product-card">
                         <img src="https://paultan.org/image/2021/08/2022-Proton-Persona-facelift-Premium-Space-Grey-01-e1628134455824.jpg" alt="Proton Persona Standard" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge standard-badge">Standard</span>
                             <h3 class="product-title">Proton Persona Standard</h3>
                             <div class="product-price">From RM 50,990.69</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Standard B-Segment Sedan</li>
-                                <li><i class="fas fa-check"></i> 1.6L VVT Engine</li>
-                                <li><i class="fas fa-check"></i> CVT Transmission</li>
-                                <li><i class="fas fa-check"></i> Basic Safety Features</li>
-                                <li><i class="fas fa-check"></i> Fabric Seats</li>
+                                <li><i class="fas fa-check"></i> **B-Segment Sedan** (Base Model)</li>
+                                <li><i class="fas fa-check"></i> **1.6L VVT** Engine with CVT</li>
+                                <li><i class="fas fa-check"></i> **ESC** & Traction Control</li>
+                                <li><i class="fas fa-check"></i> **3.5-inch Meter Cluster**, Manual A/C</li>
+                                <li><i class="fas fa-check"></i> **Large 510L Boot**, Dual Airbags</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton Persona Standard">Book Test Drive</button>
                         </div>
                     </div>
 					
-					 <!-- Proton Iriz Standard -->
-                    <div class="product-card">
+					 <div class="product-card">
                         <img src="https://paultan.org/image/2021/08/2022-Proton-Iriz-Active-facelift-26-e1628131766595.jpg" alt="Proton Iriz Standard" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge standard-badge">Standard</span>
                             <h3 class="product-title">Proton Iriz Standard</h3>
                             <div class="product-price">From RM 45,849.29</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Standard B-Segment Hatchback</li>
-                                <li><i class="fas fa-check"></i> 1.6L VVT Engine</li>
-                                <li><i class="fas fa-check"></i> CVT Transmission</li>
-                                <li><i class="fas fa-check"></i> 5-Star ASEAN NCAP Rating</li>
-                                <li><i class="fas fa-check"></i> Basic Sound System</li>
+                                <li><i class="fas fa-check"></i> **B-Segment Hatchback** (Base Model)</li>
+                                <li><i class="fas fa-check"></i> **1.3L VVT** Engine with CVT</li>
+                                <li><i class="fas fa-check"></i> **ESC** & Traction Control</li>
+                                <li><i class="fas fa-check"></i> **Manual A/C**, Standard Headlamps</li>
+                                <li><i class="fas fa-check"></i> **5-Star ASEAN NCAP** Rating</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton Iriz Standard">Book Test Drive</button>
                         </div>
                     </div>
 					
-					 <!-- Proton Saga Standard -->
-                    <div class="product-card">
+					 <div class="product-card">
                         <img src="https://imgcdn.zigwheels.my/large/gallery/exterior/26/2669/proton-saga-2025-dimension-front-view-983517.jpg" alt="Proton Saga Standard" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge standard-badge">Standard</span>
                             <h3 class="product-title">Proton Saga Standard</h3>
                             <div class="product-price">From RM 42,003.1</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Standard A-Segment Sedan</li>
-                                <li><i class="fas fa-check"></i> 1.3L Engine</li>
-                                <li><i class="fas fa-check"></i> 4-Speed Automatic</li>
-                                <li><i class="fas fa-check"></i> Best-Selling Malaysian Car</li>
-                                <li><i class="fas fa-check"></i> Excellent Fuel Economy</li>
+                                <li><i class="fas fa-check"></i> **A-Segment Sedan** (Most Affordable Model)</li>
+                                <li><i class="fas fa-check"></i> **1.3L VVT** Engine, 4-Speed Automatic</li>
+                                <li><i class="fas fa-check"></i> **ABS & EBD** Braking System</li>
+                                <li><i class="fas fa-check"></i> **Hydraulic Power Steering** (Cost-Effective)</li>
+                                <li><i class="fas fa-check"></i> **Dual Airbags** (Good Basic Safety)</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton Saga Standard">Book Test Drive</button>
                         </div>
                     </div>
 					
-					 <!-- Proton X90 Standard -->
-                    <div class="product-card">
+					 <div class="product-card">
                         <img src="https://carsofmalaysia.com/wp-content/uploads/2024/09/Proton-X90-Premium.jpg" alt="Proton X90 Standard" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge standard-badge">Standard</span>
                             <h3 class="product-title">Proton X90 Standard</h3>
                             <div class="product-price">From RM 128,490.29</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Flagship 7-Seater SUV</li>
-                                <li><i class="fas fa-check"></i> Mild Hybrid Technology</li>
-                                <li><i class="fas fa-check"></i> Standard Leather Seats</li>
-                                <li><i class="fas fa-check"></i> Basic Safety Suite</li>
-                                <li><i class="fas fa-check"></i> 48V Belt Starter Generator</li>
+                                <li><i class="fas fa-check"></i> **D-Segment 7-Seater SUV** (Base Model)</li>
+                                <li><i class="fas fa-check"></i> **1.5L TGDi Mild Hybrid (48V)** System</li>
+                                <li><i class="fas fa-check"></i> **6 Airbags**, ESC, Traction Control</li>
+                                <li><i class="fas fa-check"></i> **LED Headlamps**, Rear A/C Vents</li>
+                                <li><i class="fas fa-check"></i> **Voice Command** ("Hi Proton")</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton X90 Standard">Book Test Drive</button>
                         </div>
                     </div>
 					
-					 <!-- Proton X70 Standard -->
-                    <div class="product-card">
+					 <div class="product-card">
                         <img src="https://imgcdn.zigwheels.my/large/gallery/exterior/26/2471/proton-x70-front-angle-low-view-523901.jpg" alt="Proton X70 Standard" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge standard-badge">Standard</span>
                             <h3 class="product-title">Proton X70 Standard</h3>
                             <div class="product-price">From RM 102,875.5</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Standard SUV Category</li>
-                                <li><i class="fas fa-check"></i> 1.8L Turbo Engine</li>
-                                <li><i class="fas fa-check"></i> 7-Speed Dual Clutch</li>
-                                <li><i class="fas fa-check"></i> Basic AWD System</li>
-                                <li><i class="fas fa-check"></i> Standard Sound System</li>
+                                <li><i class="fas fa-check"></i> **C-Segment SUV** (Base Model)</li>
+                                <li><i class="fas fa-check"></i> **1.5L TGDi** or **1.8L TGDi** Engine</li>
+                                <li><i class="fas fa-check"></i> **6 Airbags**, ESC, Hill Hold Assist</li>
+                                <li><i class="fas fa-check"></i> **Fabric Seats**, 8-inch Infotainment</li>
+                                <li><i class="fas fa-check"></i> **Auto Headlamps & Wipers**</li>
                             </ul>
                             <button class="btn test-drive-btn" data-car="Proton X70 Standard">Book Test Drive</button>
                         </div>
@@ -1628,182 +1624,186 @@ ${fullName}`;
                 </div>
             </div>
 			
-			<!-- Flagship -->
-            <div id="flagship-category" class="product-category active">
+			<div id="flagship-category" class="product-category active">
                 <div class="products-grid">
-                    <!-- Proton S70 Premium -->
                     <div class="product-card">
-                        <img src="https://automacha.com/wp-content/uploads/2023/11/01.-Proton-S70-780x470.jpg" alt="Proton X90 Premium" class="product-image">
+                        <img src="https://automacha.com/wp-content/uploads/2023/11/01.-Proton-S70-780x470.jpg" alt="Proton S70 Flagship" class="product-image">
                         <div class="product-info">
-                            <span class="product-category-badge premium-badge">Premium</span>
+                            <span class="product-category-badge premium-badge">Flagship</span>
                             <h3 class="product-title">Proton S70 Flagship</h3>
                             <div class="product-price">From RM 93,927.42</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> 8 inch touchscreen</li>
-                                <li><i class="fas fa-check"></i> Leatherette seats , single zone auto air-conditioning , rear centre armrest</li>
-                                <li><i class="fas fa-check"></i> Led Headlamps , rear LED light bar </li>
-                                <li><i class="fas fa-check"></i> Basic safety features plus 2 additional airbags, brake assist, traction control, and electronic stability control</li>
-                                <li><i class="fas fa-check"></i> Standard Bluetooth</li>
+                                <li><i class="fas fa-check"></i> **B-Segment Sedan** (Top-Spec)</li>
+                                <li><i class="fas fa-check"></i> **1.5L Turbo** (150PS/226Nm) 7-Speed DCT</li>
+                                <li><i class="fas fa-check"></i> **Full ADAS** (Lvl 2 Autonomous Features)</li>
+                                <li><i class="fas fa-check"></i> **360-Degree Camera** (3D Display)</li>
+                                <li><i class="fas fa-check"></i> **Tyre Pressure Monitoring System (TPMS)**</li>
                             </ul>
-                            <button class="btn test-drive-btn" data-car="Proton S70 Premium">Book Test Drive</button>
+                            <button class="btn test-drive-btn" data-car="Proton S70 Flagship">Book Test Drive</button>
                         </div>
                     </div>
                     
                     
-					 <!-- Proton X90 Premium -->
-                    <div class="product-card">
-                        <img src="https://carsofmalaysia.com/wp-content/uploads/2024/09/Proton-X90-Premium.jpg" alt="Proton X90 Premium" class="product-image">
+					 <div class="product-card">
+                        <img src="https://carsofmalaysia.com/wp-content/uploads/2024/09/Proton-X90-Premium.jpg" alt="Proton X90 Flagship" class="product-image">
                         <div class="product-info">
-                            <span class="product-category-badge premium-badge">Premium</span>
+                            <span class="product-category-badge premium-badge">Flagship</span>
                             <h3 class="product-title">Proton X90 Flagship</h3>
                             <div class="product-price">From RM 158,062.51</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Flagship 7-Seater SUV</li>
-                                <li><i class="fas fa-check"></i> Mild Hybrid Technology</li>
-                                <li><i class="fas fa-check"></i> Luxurious Nappa Leather</li>
-                                <li><i class="fas fa-check"></i> Advanced Safety Suite</li>
-                                <li><i class="fas fa-check"></i> 48V Belt Starter Generator</li>
+                                <li><i class="fas fa-check"></i> **D-Segment 6-Seater SUV** (Top-Spec)</li>
+                                <li><i class="fas fa-check"></i> **1.5L TGDi Mild Hybrid (48V)** System</li>
+                                <li><i class="fas fa-check"></i> **Individual Captain Seats** (2nd Row)</li>
+                                <li><i class="fas fa-check"></i> **Full ADAS** + Automated Parking Assist (APA)</li>
+                                <li><i class="fas fa-check"></i> **Panoramic Sunroof**</li>
                             </ul>
-                            <button class="btn test-drive-btn" data-car="Proton X90 Premium">Book Test Drive</button>
+                            <button class="btn test-drive-btn" data-car="Proton X90 Flagship">Book Test Drive</button>
                         </div>
                     </div>
 					
 					 
-                    <!-- Proton X50 Premium -->
-                    <div class="product-card">
-                        <img src="https://automacha.com/wp-content/uploads/2020/09/Proton-X50-showroom-pictures__7204-1.jpg" alt="Proton S70 Premium" class="product-image">
+					 <div class="product-card">
+                        <img src="https://automacha.com/wp-content/uploads/2020/09/Proton-X50-showroom-pictures__7204-1.jpg" alt="Proton X50 Flagship" class="product-image">
                         <div class="product-info">
-                            <span class="product-category-badge premium-badge">Premium</span>
+                            <span class="product-category-badge premium-badge">Flagship</span>
                             <h3 class="product-title">Proton X50 Flagship</h3>
                             <div class="product-price">From RM 117,636.40</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Executive Sedan</li>
-                                <li><i class="fas fa-check"></i> 1.5L Turbo Engine</li>
-                                <li><i class="fas fa-check"></i> Advanced Safety Features</li>
-                                <li><i class="fas fa-check"></i> Premium Interior</li>
-                                <li><i class="fas fa-check"></i> Smart Connectivity</li>
+                                <li><i class="fas fa-check"></i> **B-Segment Compact SUV** (Top-Spec)</li>
+                                <li><i class="fas fa-check"></i> **1.5L TGDi** (177PS/255Nm) 7-Speed DCT</li>
+                                <li><i class="fas fa-check"></i> **Full ADAS** (Lvl 2 Autonomous Features)</li>
+                                <li><i class="fas fa-check"></i> **Automated Parking Assist (APA)**</li>
+                                <li><i class="fas fa-check"></i> **Dual-Tone Exterior** with Red Calipers</li>
                             </ul>
-                            <button class="btn test-drive-btn" data-car="Proton X50 Premium">Book Test Drive</button>
+                            <button class="btn test-drive-btn" data-car="Proton X50 Flagship">Book Test Drive</button>
                         </div>
                     </div>
                 </div>
             </div>
-            
-			<!-- Flagshipx Category -->
-            <div id="flagshipx-category" class="product-category active">
+			
+			<div id="flagshipx-category" class="product-category active">
                 <div class="products-grid">
-                    <!-- Proton S70 Premium -->
                     <div class="product-card">
-                        <img src="https://automacha.com/wp-content/uploads/2023/11/01.-Proton-S70-780x470.jpg" alt="Proton X90 Premium" class="product-image">
+                        <img src="https://automacha.com/wp-content/uploads/2023/11/01.-Proton-S70-780x470.jpg" alt="Proton S70 FlagshipX" class="product-image">
                         <div class="product-info">
-                            <span class="product-category-badge premium-badge">Premium</span>
+                            <span class="product-category-badge premium-badge">Flagship X</span>
                             <h3 class="product-title">Proton S70 FlagshipX</h3>
                             <div class="product-price">From RM 99,026.07</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> 8 inch touchscreen</li>
-                                <li><i class="fas fa-check"></i> Leatherette seats , single zone auto air-conditioning , rear centre armrest</li>
-                                <li><i class="fas fa-check"></i> Led Headlamps , rear LED light bar </li>
-                                <li><i class="fas fa-check"></i> Basic safety features plus 2 additional airbags, brake assist, traction control, and electronic stability control</li>
-                                <li><i class="fas fa-check"></i> Standard Bluetooth</li>
+                                <li><i class="fas fa-check"></i> **S70 Special Edition/Ultimate Trim**</li>
+                                <li><i class="fas fa-check"></i> **Unique Aero Kit** and Exterior Badging</li>
+                                <li><i class="fas fa-check"></i> **Exclusive Interior Trim** and Stitching</li>
+                                <li><i class="fas fa-check"></i> All features from the **Flagship** model included</li>
+                                <li><i class="fas fa-check"></i> Limited Production Run</li>
                             </ul>
-                            <button class="btn test-drive-btn" data-car="Proton S70 Premium">Book Test Drive</button>
+                            <button class="btn test-drive-btn" data-car="Proton S70 FlagshipX">Book Test Drive</button>
                         </div>
                     </div>
                 </div>
             </div>
 			
-			<!-- PremiumX Category -->
-            <div id="premiumx-category" class="product-category active">
+			<div id="premiumx-category" class="product-category active">
                 <div class="products-grid">
                     
-					 <!-- Proton X70 Premium -->
-                    <div class="product-card">
-                        <img src="https://imgcdn.zigwheels.my/large/gallery/exterior/26/2471/proton-x70-front-angle-low-view-523901.jpg" alt="Proton X90 Premium" class="product-image">
+					 <div class="product-card">
+                        <img src="https://imgcdn.zigwheels.my/large/gallery/exterior/26/2471/proton-x70-front-angle-low-view-523901.jpg" alt="Proton X70 PremiumX" class="product-image">
                         <div class="product-info">
-                            <span class="product-category-badge premium-badge">Premium</span>
+                            <span class="product-category-badge premium-badge">Premium X</span>
                             <h3 class="product-title">Proton X70 PremiumX</h3>
                             <div class="product-price">From RM 131,397.29</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Premium SUV Category</li>
-                                <li><i class="fas fa-check"></i> 1.8L Turbo Engine</li>
-                                <li><i class="fas fa-check"></i> 7-Speed Dual Clutch</li>
-                                <li><i class="fas fa-check"></i> Intelligent AWD System</li>
-                                <li><i class="fas fa-check"></i> Premium Sound System</li>
+                                <li><i class="fas fa-check"></i> **X70 Special Edition/Upgraded Premium** Trim</li>
+                                <li><i class="fas fa-check"></i> Adds **Panoramic Sunroof** to Premium Features</li>
+                                <li><i class="fas fa-check"></i> **Ventilated Seats**, Voice Command, ADAS</li>
+                                <li><i class="fas fa-check"></i> **Premium Exterior Styling** Elements</li>
+                                <li><i class="fas fa-check"></i> Focus on Luxury and Comfort</li>
                             </ul>
-                            <button class="btn test-drive-btn" data-car="Proton X70 Premium">Book Test Drive</button>
+                            <button class="btn test-drive-btn" data-car="Proton X70 PremiumX">Book Test Drive</button>
                         </div>
                     </div>
                 </div>
             </div>
 			
-			<!-- Prime Category -->
-            <div id="prime-category" class="product-category active">
+			<div id="prime-category" class="product-category active">
                 <div class="products-grid">
                     
-					 <!-- Proton E-Mas Premium -->
-                    <div class="product-card">
-                        <img src="https://assets.autobuzz.my/wp-content/uploads/2024/12/16165907/2024-Proton-eMAS7-Launch-Malaysia-4.jpg" alt="Proton X70 Premium" class="product-image">
+					 <div class="product-card">
+                        <img src="https://assets.autobuzz.my/wp-content/uploads/2024/12/16165907/2024-Proton-eMAS7-Launch-Malaysia-4.jpg" alt="Proton E-Mas 5 Prime" class="product-image">
                         <div class="product-info">
-                            <span class="product-category-badge premium-badge">Prime</span>
+                            <span class="product-category-badge premium-badge">Prime (Concept)</span>
                             <h3 class="product-title">Proton E-Mas 5 Prime</h3>
                             <div class="product-price">From RM 59,800</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Premium SUV Category</li>
-                                <li><i class="fas fa-check"></i> 1.8L Turbo Engine</li>
-                                <li><i class="fas fa-check"></i> 7-Speed Dual Clutch</li>
-                                <li><i class="fas fa-check"></i> Intelligent AWD System</li>
-                                <li><i class="fas fa-check"></i> Premium Sound System</li>
+                                <li><i class="fas fa-check"></i> **Electric Vehicle (EV)** Future Concept</li>
+                                <li><i class="fas fa-check"></i> Focus on **Zero Emission** Urban Commuting</li>
+                                <li><i class="fas fa-check"></i> Designed for High-Efficiency Battery Packs</li>
+                                <li><i class="fas fa-check"></i> Likely Proton's most **Affordable EV** Model</li>
                             </ul>
-                            <button class="btn test-drive-btn" data-car="Proton E-Mas Premium">Book Test Drive</button>
+                            <button class="btn test-drive-btn" data-car="Proton E-Mas 5 Prime">Book Test Drive</button>
                         </div>
                     </div>
 					
-					<!-- Proton E-Mas Premium -->
-                    <div class="product-card">
-                        <img src="https://assets.autobuzz.my/wp-content/uploads/2024/12/16165907/2024-Proton-eMAS7-Launch-Malaysia-4.jpg" alt="Proton X70 Premium" class="product-image">
+					<div class="product-card">
+                        <img src="https://assets.autobuzz.my/wp-content/uploads/2024/12/16165907/2024-Proton-eMAS7-Launch-Malaysia-4.jpg" alt="Proton E-Mas 7 Prime" class="product-image">
                         <div class="product-info">
-                            <span class="product-category-badge premium-badge">Prime</span>
+                            <span class="product-category-badge premium-badge">Prime (Concept)</span>
                             <h3 class="product-title">Proton E-Mas 7 Prime</h3>
                             <div class="product-price">From RM 105,800</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Premium SUV Category</li>
-                                <li><i class="fas fa-check"></i> 1.8L Turbo Engine</li>
-                                <li><i class="fas fa-check"></i> 7-Speed Dual Clutch</li>
-                                <li><i class="fas fa-check"></i> Intelligent AWD System</li>
-                                <li><i class="fas fa-check"></i> Premium Sound System</li>
+                                <li><i class="fas fa-check"></i> **Electric Vehicle (EV)** Future Concept</li>
+                                <li><i class="fas fa-check"></i> Spacious **3-Row Family EV** Crossover</li>
+                                <li><i class="fas fa-check"></i> High Range & Rapid Charging Capability</li>
+                                <li><i class="fas fa-check"></i> Represents Proton's **Sustainable Flagship**</li>
                             </ul>
-                            <button class="btn test-drive-btn" data-car="Proton E-Mas Premium">Book Test Drive</button>
+                            <button class="btn test-drive-btn" data-car="Proton E-Mas 7 Prime">Book Test Drive</button>
                         </div>
                     </div>
                 </div>
             </div>
 			
-			<!-- Active Category -->
-            <div id="active-category" class="product-category active">
+			<div id="active-category" class="product-category active">
                 <div class="products-grid">
                     
-					 <!-- Proton Iriz Executive -->
-                    <div class="product-card">
+					 <div class="product-card">
                         <img src="https://paultan.org/image/2021/08/2022-Proton-Iriz-Active-facelift-26-e1628131766595.jpg" alt="Proton Iriz Active" class="product-image">
                         <div class="product-info">
                             <span class="product-category-badge executive-badge">Active</span>
                             <h3 class="product-title">Proton Iriz Active</h3>
                             <div class="product-price">From RM 60,643.12</div>
                             <ul class="product-features">
-                                <li><i class="fas fa-check"></i> Executive B-Segment Hatchback</li>
-                                <li><i class="fas fa-check"></i> 1.6L VVT Engine</li>
-                                <li><i class="fas fa-check"></i> CVT Transmission</li>
-                                <li><i class="fas fa-check"></i> 5-Star ASEAN NCAP Rating</li>
-                                <li><i class="fas fa-check"></i> Executive Sound System</li>
+                                <li><i class="fas fa-check"></i> **Crossover Styling** B-Segment Hatchback</li>
+                                <li><i class="fas fa-check"></i> **1.6L VVT** Engine with CVT</li>
+                                <li><i class="fas fa-check"></i> **Unique Body Cladding** and Roof Rails</li>
+                                <li><i class="fas fa-check"></i> **New Active Leatherette Interior**</li>
+                                <li><i class="fas fa-check"></i> Slightly **Increased Ride Height**</li>
                             </ul>
-                            <button class="btn test-drive-btn" data-car="Proton Iriz Executive">Book Test Drive</button>
+                            <button class="btn test-drive-btn" data-car="Proton Iriz Active">Book Test Drive</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Page -->
+        <section id="price-list-page" class="page">
+            <h2 class="section-title">Official Proton Price List</h2>
+            
+            <div class="price-list-container">
+                <p style="margin-bottom: 20px;">Please find the latest official price list for all Proton models below. Prices are inclusive of sales tax (SST) exemptions, subject to change, and exclude insurance.</p>
+                
+                <img src="https://scontent-kul2-1.xx.fbcdn.net/v/t39.30808-6/589956216_10225721175694733_2726694511815382912_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG4vrZNz-ApjHGC6NfF-MKHmdwiq30SK2WZ3CKrfRIrZR4rfSjq1rV8EW7UrgEA1IceteDnmxDgbff6-6G7dPbj&_nc_ohc=bg5OdkmlRSgQ7kNvwGljyES&_nc_oc=Adn0H_2GLm5qDEaiIx0SqtFufwQqmMdkFFocxWpWAByR6OP2KaKxheaVvzMYKapkL5o&_nc_zt=23&_nc_ht=scontent-kul2-1.xx&_nc_gid=jhXlw8gpL6w4y7wRLbRaUw&oh=00_AfnOspWxivT-rRsGCnWu8r0UTVo-NME7TGnRI6LDj1X9dQ&oe=693C440A" 
+                     alt="Official Proton Price List Image" 
+                     class="full-width-price-list-img">
+                
+                <p style="text-align: center; margin-top: 20px; color: var(--gray);">
+                    *Prices are subject to final confirmation upon booking. Contact Mr. Tonny for guaranteed final prices and promotions.
+                </p>
+                <div style="text-align: center; margin-top: 30px;">
+                     <a href="" class="btn btn-secondary nav-link" data-page="booking">Book a Test Drive or Purchase</a>
+                </div>
+            </div>
+        </section>
+
+
         <section id="about-page" class="page">
             <h2 class="section-title">About Your Proton Consultant</h2>
             
@@ -1833,8 +1833,8 @@ ${fullName}`;
                         <div class="success-card">
                             <img src="https://paultan.org/image/2025/11/2026-Proton-Saga-1.5-Premium-MC3-Marine-Blue-official-photo-8-e1763005358811-630x331.jpg" alt="Happy Customer" class="success-img">
                             <div class="success-info">
-                              <h4>Mrs Angel Leong</h4>
-                              <p>Purchased Proton X70 in January 2023. "Mr. Tonny provided excellent service and helped us get the best financing deal for our new family car."</p>
+                                <h4>Mrs Angel Leong</h4>
+                                <p>Purchased Proton X70 in January 2023. "Mr. Tonny provided excellent service and helped us get the best financing deal for our new family car."</p>
                             </div>
                         </div>
                         
@@ -1858,11 +1858,9 @@ ${fullName}`;
             </div>
         </section>
 
-        <!-- Booking Page -->
         <section id="booking-page" class="page">
             <h2 class="section-title">Booking & Test Drive</h2>
             
-            <!-- Success Message (Hidden by default) -->
             <div id="success-message" class="success-message">
                 <div class="success-icon">
                     <i class="fas fa-check-circle"></i>
@@ -1873,7 +1871,6 @@ ${fullName}`;
                 <button class="btn" id="new-booking-btn">Make Another Booking</button>
             </div>
             
-            <!-- Booking Form (Visible by default) -->
             <div id="booking-form-container">
                 <div class="booking-container">
                     <div class="booking-tabs">
@@ -1881,7 +1878,6 @@ ${fullName}`;
                         <button class="booking-tab" data-tab="car-purchase">Car Purchase Application</button>
                     </div>
                     
-                    <!-- Test Drive Booking Form -->
                     <div id="test-drive-tab" class="booking-tab-content active">
                         <form id="test-drive-form">
                             <div class="test-drive-info-box">
@@ -1981,7 +1977,6 @@ ${fullName}`;
                         </form>
                     </div>
                     
-                    <!-- Car Purchase Application Form -->
                     <div id="car-purchase-tab" class="booking-tab-content">
                         <form id="purchase-form">
                             <div class="form-row">
@@ -2114,7 +2109,6 @@ ${fullName}`;
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -2140,6 +2134,7 @@ ${fullName}`;
                     <h3>Quick Links</h3>
                     <a href="" class="nav-link" data-page="home">Home</a>
                     <a href="" class="nav-link" data-page="products">Proton Models</a>
+                    <a href="" class="nav-link" data-page="price-list">Price List</a>
                     <a href="" class="nav-link" data-page="about">About Consultant</a>
                     <a href="" class="nav-link" data-page="booking">Booking</a>
                 </div>
@@ -2443,7 +2438,7 @@ ${fullName}`;
                                 <div style="background: white; padding: 15px; border-radius: 5px; margin: 15px 0;">
                                     <p style="margin: 0; font-weight: bold;">Email Address:</p>
                                     <p style="font-size: 1.3rem; color: var(--primary); font-weight: bold; margin: 10px 0;">
-                                       tonnychie@yahoo.com
+                                        tonnychie@yahoo.com
                                     </p>
                                     
                                     <p style="margin: 10px 0 0 0; font-size: 0.9rem; color: var(--gray);">
