@@ -320,7 +320,8 @@ ${fullName}`;
 
     </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200, initial-scale=1.0"> <title>Fook Loi Proton - Malaysia's Premium Proton Dealer</title>
+    <meta name="viewport" content="width=1200, initial-scale=1.0"> 
+    <title>Fook Loi Proton - Malaysia's Premium Proton Dealer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -429,13 +430,77 @@ ${fullName}`;
         }
 
         .mobile-menu-btn {
-            display: none;
+            /* FORCED DISPLAY: Make button visible on all screen sizes */
+            display: block; 
             background: none;
             border: none;
             font-size: 1.5rem;
             color: var(--primary);
             cursor: pointer;
+            position: relative; /* Needed for z-index */
+            z-index: 1001; /* Ensure it is clickable over the horizontal menu */
         }
+
+        /* Custom styling to manage the full horizontal menu when in mobile view */
+        @media (max-width: 992px) {
+            nav ul:not(.nav-menu.active) {
+                /* Hide the full navigation menu when it is NOT active (i.e., when the hamburger is closed) */
+                display: none; 
+            }
+            
+            /* Styles for the OPEN mobile menu overlay */
+            .nav-menu.active {
+                display: flex;
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: var(--shadow);
+                transform: translateY(0);
+                opacity: 1;
+                transition: all 0.3s;
+                z-index: 999;
+            }
+            
+            nav ul {
+                /* General styling for the mobile list structure */
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+            }
+            
+            nav li {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid var(--light-gray);
+            }
+            
+            nav a {
+                display: block;
+                padding: 15px 0;
+            }
+            
+            /* Hide the hamburger button on screens large enough for the full menu */
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        
+        @media (min-width: 993px) {
+            /* On desktop, hide the hamburger button and show the full menu inline */
+            .mobile-menu-btn {
+                display: none;
+            }
+            nav ul {
+                display: flex; /* Ensure the menu is horizontal on desktop */
+                flex-direction: row;
+            }
+        }
+
 
         /* Hero Section */
         .hero {
@@ -1157,11 +1222,6 @@ ${fullName}`;
             
             .booking-tabs {
                 flex-direction: column;
-            }
-            
-            .booking-tab {
-                text-align: center;
-                border-bottom: 1px solid var(--light-gray);
             }
             
             .booking-tab.active::after {
