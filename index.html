@@ -430,47 +430,51 @@ ${fullName}`;
         }
 
         .mobile-menu-btn {
-            /* FORCED DISPLAY: Make button visible on all screen sizes */
-            display: block; 
+            display: none;
             background: none;
             border: none;
             font-size: 1.5rem;
             color: var(--primary);
             cursor: pointer;
-            position: relative; /* Needed for z-index */
-            z-index: 1001; /* Ensure it is clickable over the horizontal menu */
+            position: relative; 
+            z-index: 1001; 
         }
 
-        /* Custom styling to manage the full horizontal menu when in mobile view */
+        /* ===================================================================
+        RESPONSIVE STYLES RE-INTRODUCED FOR NAVIGATION ONLY
+        =================================================================== */
         @media (max-width: 992px) {
+            
+            /* 1. HIDE THE WIDE MENU ON SMALL SCREENS (When not active) */
             nav ul:not(.nav-menu.active) {
-                /* Hide the full navigation menu when it is NOT active (i.e., when the hamburger is closed) */
                 display: none; 
             }
             
-            /* Styles for the OPEN mobile menu overlay */
+            /* 2. SHOW THE HAMBURGER BUTTON ON SMALL SCREENS */
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            /* 3. STYLES FOR THE OPEN MOBILE MENU */
             .nav-menu.active {
                 display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: var(--shadow);
+                
+                /* Position as an overlay */
                 position: fixed;
                 top: 80px;
                 left: 0;
                 width: 100%;
                 background-color: white;
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                box-shadow: var(--shadow);
+                z-index: 999;
+                
+                /* Transition/Animation properties */
                 transform: translateY(0);
                 opacity: 1;
                 transition: all 0.3s;
-                z-index: 999;
-            }
-            
-            nav ul {
-                /* General styling for the mobile list structure */
-                flex-direction: column;
-                gap: 0;
-                width: 100%;
             }
             
             nav li {
@@ -483,24 +487,19 @@ ${fullName}`;
                 display: block;
                 padding: 15px 0;
             }
-            
-            /* Hide the hamburger button on screens large enough for the full menu */
-            .mobile-menu-btn {
-                display: block;
-            }
         }
         
         @media (min-width: 993px) {
-            /* On desktop, hide the hamburger button and show the full menu inline */
+            /* Ensure the mobile button is hidden on desktop */
             .mobile-menu-btn {
                 display: none;
             }
+             /* Ensure the menu is horizontal on desktop */
             nav ul {
-                display: flex; /* Ensure the menu is horizontal on desktop */
+                display: flex; 
                 flex-direction: row;
             }
         }
-
 
         /* Hero Section */
         .hero {
@@ -1140,108 +1139,9 @@ ${fullName}`;
         }
 
 
-        /* ===================================================================
-        RESPONSIVE STYLES (COMMMENTED OUT TO FORCE DESKTOP VIEW ON MOBILE)
-        ===================================================================
-        To revert to responsive behavior, uncomment the blocks below.
-        */
-
-        /* @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .nav-menu {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background-color: white;
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                box-shadow: var(--shadow);
-                transform: translateY(-100%);
-                opacity: 0;
-                transition: all 0.3s;
-                z-index: 999;
-            }
-            
-            .nav-menu.active {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                gap: 0;
-                width: 100%;
-            }
-            
-            nav li {
-                width: 100%;
-                text-align: center;
-                border-bottom: 1px solid var(--light-gray);
-            }
-            
-            nav a {
-                display: block;
-                padding: 15px 0;
-            }
-            
-            .profile-header {
-                justify-content: center;
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                padding: 70px 20px;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .booking-container, .about-section, .intro {
-                padding: 30px 20px;
-            }
-            
-            .booking-tabs {
-                flex-direction: column;
-            }
-            
-            .booking-tab.active::after {
-                display: none;
-            }
-            
-            .car-selection {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+        /* The remaining responsive media queries are still commented out below
+           to force a wide content layout, as requested. */
         
-        @media (max-width: 480px) {
-            .car-selection {
-                grid-template-columns: 1fr;
-            }
-            
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-        } */
     </style>
 </head>
 <body>
